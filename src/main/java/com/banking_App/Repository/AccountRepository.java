@@ -1,0 +1,13 @@
+package com.banking_App.Repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.banking_App.entity.Account;
+
+public interface AccountRepository extends JpaRepository<Account, Long> {
+
+	List<Account> findByUserUid(Long userId);
+	
+
+}
